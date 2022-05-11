@@ -91,7 +91,7 @@ export default function Sidebar() {
         settagsInclude(tagsInclude?.filter((tag: string) => tag !== tagName))
     }
 
-    console.info("tagsIncludes++ ", tagsInclude)
+    // console.info("tagsIncludes++ ", tagsInclude)
 
     const filterTagsExclude = (tagName: string) => {
         const tags = JSON.parse(JSON.stringify(tagsExclude))
@@ -235,7 +235,7 @@ export default function Sidebar() {
                         </Box>
                         <Box className='category-block'>
                             {contactList?.map((item: contact) => {
-                                console.info("item++ ", item)
+                                // console.info("item++ ", item)
                                 return (
                                     <Box className='category-item'>
                                         <Box className='category-inner'>

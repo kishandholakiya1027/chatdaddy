@@ -21,7 +21,7 @@ const App = () => {
     const data = '{\n  "refreshToken": "059c420e-7424-431f-b23b-af0ecabfe7b8",\n  "teamId": "a001994b-918b-4939-8518-3377732e4e88"\n}\n';
     const result = await getToken(data)
     localStorage.setItem('token',result?.data?.access_token)
-    console.info("result++ ",result)
+    // console.info("result++ ",result)
   }
 
 
