@@ -54,9 +54,10 @@ export default function Sidebar() {
         getData()
     }, [debouncedSearchTerm])
 
+    console.info("searchValue++ ",searchValue)
+
     const getData = async () => {
-        let query = `q=${searchValue}${tagsInclude?.map((item) => `&tags=${item}`)}
-                        ${tagsExclude?.map((item) => `&notTags=${item}`)}`
+        let query = `q=${searchValue}${tagsInclude?.map((item) => `&tags=${item}`)}${tagsExclude?.map((item) => `&notTags=${item}`)}`
 
         if(messagesFilter?.messageSentMin){
             query = query.concat(`&minMessagesSent=${messagesFilter?.messageSentMin}`)
